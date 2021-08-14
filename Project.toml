@@ -1,0 +1,4 @@
+name = "blobs"
+uuid = "efc32f7b-40dd-476c-9892-fad993054560"
+authors = ["gelzinyte <elena.gelzinyte@gmail.com>"]
+version = "0.1.0"
