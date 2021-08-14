@@ -26,7 +26,6 @@ end
 Reads cube files produced by ORCA
 https://h5cube-spec.readthedocs.io/en/latest/cubeformat.html
 http://paulbourke.net/dataformats/cube/
-"""
 function read_orca_cube(filename)
 
     file = readlines(filename)
@@ -49,7 +48,7 @@ function read_orca_cube(filename)
 
     return unflatten(flat_values, shape=dens_shape)
 
-
+"""
 end
 
 
