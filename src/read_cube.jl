@@ -18,7 +18,7 @@ function read_orca_3D(filename)
 
     file = readlines(filename)[5:end-1]
     flat_array = parse.(Float64, file)
-    return unflatten(original_flat_array)
+    return unflatten(flat_array)
 end    
 
 

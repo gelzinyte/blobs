@@ -21,11 +21,12 @@ function flatten_like_cube(density; dens_shape=(40, 40, 40))
 end
 
 # get density from file 
- density = read_orca_3D('orca_density.3d')
+density_file="orca_density.3d"
+density = read_orca_3D(density_file)
 
 # read just unflattened values
 string_values = readlines(density_file)[5:end-1]
-flat_array = parse.(Float64, starting_values)
+original_flat_array = parse.(Float64, string_values)
 
 # flatten the constructed density and check it matches how 
 # it's written to file
@@ -34,4 +35,4 @@ flattened = flatten_like_cube(density)
 
 
 # check can read in cube file 
-density = read_orca_cube('orca_density.cube')
+#density = read_orca_cube("orca_density.cube")
