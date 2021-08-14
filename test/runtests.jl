@@ -35,4 +35,4 @@ flattened = flatten_like_cube(density)
 
 
 # check can read in cube file 
-#density = read_orca_cube("orca_density.cube")
+density = read_orca_cube("orca_density.cube")

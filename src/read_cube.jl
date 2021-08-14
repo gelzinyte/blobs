@@ -21,11 +21,11 @@ function read_orca_3D(filename)
     return unflatten(flat_array)
 end    
 
-
 """
 Reads cube files produced by ORCA
 https://h5cube-spec.readthedocs.io/en/latest/cubeformat.html
 http://paulbourke.net/dataformats/cube/
+"""
 function read_orca_cube(filename)
 
     file = readlines(filename)
@@ -41,7 +41,7 @@ function read_orca_cube(filename)
 
     # density data starts after `n_atoms` lines of geometry data
     flat_values=zeros(0)	
-    for line in file[7+n_atoms:end]:
+    for line in file[7+n_atoms:end]
         numbers = parse.(Float64, split(line))
         append!(flat_values, numbers)
     end
@@ -49,6 +49,5 @@ function read_orca_cube(filename)
     return unflatten(flat_values, shape=dens_shape)
 
 end
-"""
 
 
