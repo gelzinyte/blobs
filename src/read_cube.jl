@@ -8,7 +8,7 @@ Goes from a flattened density read from .cube or orca's .3D to a
 3D array. 
 """
 function unflatten(flat_array; shape=(40, 40, 40))
-	return permutedims(reshape(flat_array, (40, 40, 40)), [3, 2, 1])
+	return permutedims(reshape(flat_array, shape), [3, 2, 1])
 end
 
 """
